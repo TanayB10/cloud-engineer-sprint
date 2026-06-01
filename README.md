@@ -25,3 +25,10 @@
 - Configured a Layer 4 Security Group acting as a firewall, restricting SSH access (Port 22) to my personal IP address while opening HTTP access (Port 80) globally (`0.0.0.0/0`).
 - Established a secure cryptographic handshake connection using an RSA private key file ('.pem') with 'chmod 400' security compliance.
 - Remotely initialized the server via SSH, updated packages via 'dnf', and deployed a highly available Nginx web server background process.
+
+
+## Week 5: Configuration Automation & Shell Scripting
+- Automated the entire server provisioning pipeline using an asynchronous AWS User Data lifecycle script.
+- Eliminated manual SSH overhead by executing system package updates, software installation, and background daemon configuration dynamically at boot time.
+- Implemented a standard Linux 'Heredoc' ('cat <<EOF') pattern to inject automated custom HTML deployment indicators directly into system storage directories.
+- Saved core automation routine to 'setup-webserver.sh' for multi-region scalability.
