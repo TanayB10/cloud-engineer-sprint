@@ -38,3 +38,10 @@
 - Evaluated block storage topology (Amazon EBS) vs. globally decoupled object storage frameworks (Amazon S3).
 - Provisioned a production-tier private S3 storage bucket under a strict global namespace with 'Block All Public Access' compliance to protect static assets.
 - Mitigated credential-leakage risks by defining Least-Privilege access strategies, favoring temporary IAM Instance Profiles over hardcoded static AWS Access Keys for EC2-to-S3 infrastructure integration.
+
+
+## Cloud Security & IAM
+### Week 7: Machine Identities & Policy Enforcement
+- Engineered a secure, passwordless machine-to-machine authentication pipeline using AWS IAM Roles and Instance Profiles.
+- Audited and decrypted IAM JSON policy structures, mapping explicitly allowed API actions (`s3:Get*`, `s3:List*`) against global cloud resources.
+- Validated the 'Principle of Least Privilege' by verifying cryptographic execution of the AWS CLI via the EC2 metadata service, successfully conducting data retrieval while actively blocking unauthorized destructive actions (`AccessDenied` on bucket deletion).
