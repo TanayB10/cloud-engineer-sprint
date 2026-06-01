@@ -32,3 +32,9 @@
 - Eliminated manual SSH overhead by executing system package updates, software installation, and background daemon configuration dynamically at boot time.
 - Implemented a standard Linux 'Heredoc' ('cat <<EOF') pattern to inject automated custom HTML deployment indicators directly into system storage directories.
 - Saved core automation routine to 'setup-webserver.sh' for multi-region scalability.
+
+## Cloud Storage & Databases
+### Week 6: Object Storage Foundations
+- Evaluated block storage topology (Amazon EBS) vs. globally decoupled object storage frameworks (Amazon S3).
+- Provisioned a production-tier private S3 storage bucket under a strict global namespace with 'Block All Public Access' compliance to protect static assets.
+- Mitigated credential-leakage risks by defining Least-Privilege access strategies, favoring temporary IAM Instance Profiles over hardcoded static AWS Access Keys for EC2-to-S3 infrastructure integration.
