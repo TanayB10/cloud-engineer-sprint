@@ -53,3 +53,11 @@
 - Configured an isolated RDS DB Subnet Group and applied strict 'Security Group Chaining' onto `database-sg`, permitting inbound MySQL traffic (Port 3306) exclusively from web-tier firewalls.
 - Pivoted away from front-end console configuration constraints by executing a direct AWS CLI engine allocation (`aws rds create-db-instance`) inside the CloudShell terminal environment.
 - Provisioned a zero-egress, privately isolated, Free-Tier compliant Amazon RDS MySQL instance completely unreachable by public routing mechanics.
+
+
+## Core AWS Compute & Automation (Cont.)
+### Week 9: High Availability & Traffic Management (ALB)
+- Architected a multi-Availability Zone load-balanced public tier (`public-web-subnet-2`) to mitigate Single Points of Failure (SPOF).
+- Engineered an AWS Target Group (`bank-web-targets`) passing automated Layer 7 HTTP health checks across decoupled EC2 web endpoints.
+- Provisioned an internet-facing Application Load Balancer (ALB) enforcing a dynamic Round-Robin traffic distribution matrix.
+- Conducted Chaos Engineering validation by executing an unannounced server power shutdown, verifying immediate sub-minute failover capabilities with 100% application uptime.
