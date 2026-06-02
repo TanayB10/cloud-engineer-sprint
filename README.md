@@ -45,3 +45,11 @@
 - Engineered a secure, passwordless machine-to-machine authentication pipeline using AWS IAM Roles and Instance Profiles.
 - Audited and decrypted IAM JSON policy structures, mapping explicitly allowed API actions (`s3:Get*`, `s3:List*`) against global cloud resources.
 - Validated the 'Principle of Least Privilege' by verifying cryptographic execution of the AWS CLI via the EC2 metadata service, successfully conducting data retrieval while actively blocking unauthorized destructive actions (`AccessDenied` on bucket deletion).
+
+
+## Cloud Storage & Databases (Cont.)
+### Week 8: The Managed Relational Database Tier (RDS)
+- Built a multi-Availability Zone private subnet footprint (`private-db-subnet-2`) to satisfy high-availability database cluster parameters.
+- Configured an isolated RDS DB Subnet Group and applied strict 'Security Group Chaining' onto `database-sg`, permitting inbound MySQL traffic (Port 3306) exclusively from web-tier firewalls.
+- Pivoted away from front-end console configuration constraints by executing a direct AWS CLI engine allocation (`aws rds create-db-instance`) inside the CloudShell terminal environment.
+- Provisioned a zero-egress, privately isolated, Free-Tier compliant Amazon RDS MySQL instance completely unreachable by public routing mechanics.
