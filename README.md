@@ -69,3 +69,11 @@
 - Deployed a multi-Availability Zone Auto Scaling Group (`bank-web-asg`) mapped across custom public subnets with target-tracking thresholds bound to a 70% CPU metric ceiling.
 - Enforced systemic elasticity parameters regulating high-availability bounds across structural Desired (2), Minimum (1), and Maximum (4) operational constraints.
 - Executed Chaos Engineering lifecycle degradation tests, validating automated event detection and stateless self-healing compute provisioning without administrative manual intervention.
+
+
+## Security, Monitoring, & Cost Optimization
+### Week 11: CloudWatch Metrics & Monitoring (Alarms)
+- Authorized global cross-account governance telemetry by enabling CloudWatch Billing Alerts inside root billing preferences.
+- Swapped regional console contexts to the `us-east-1` (N. Virginia) global cost aggregation tier to capture structural account metrics.
+- Constructed a static CloudWatch Alarm (`Estimated-Charges-Over-5-Dollars`) mapping the `EstimatedCharges` metric on a 6-hour evaluation frequency.
+- Provisioned an automated Simple Notification Service (SNS) messaging topic (`billing-alarm-topic`), binding an email communication endpoint for real-time cost escalation alerts.
