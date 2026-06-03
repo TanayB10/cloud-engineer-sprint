@@ -93,3 +93,10 @@
 - Engineered a standard declarative HashiCorp Configuration Language (HCL) deployment matrix (`main.tf`) targeting provider ecosystem constraints.
 - Executed core Infrastructure as Code (IaC) engineering lifecycles including initialization (`terraform init`), structural dry-run evaluation (`terraform plan`), and live state application (`terraform apply`).
 - Automated the deterministic provisioning of a globally unique, multi-tagged Amazon S3 data bucket cluster completely bypassed from manual console interaction.
+
+
+### Week 14: Managing AWS VPC with Terraform
+- Programmed a comprehensive multi-tier network topology blueprint (`network.tf`) leveraging native HCL resource dependency mapping.
+- Provisioned a programmatic Virtual Private Cloud (VPC) with custom CIDR block segmentations (`10.0.0.0/16`) and automated DNS hostname mapping.
+- Orchestrated automated routing boundaries by linking public subnet allocations, an edge Internet Gateway interface, and explicit default routing declarations (`0.0.0.0/0`).
+- Codified an infrastructure firewall policy matrix within an isolated Security Group schema to selectively regulate incoming Port 80 (HTTP) and Port 22 (SSH) packet traffic.
