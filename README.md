@@ -85,3 +85,11 @@
 - Provisioned a decoupled testing endpoint inside a custom VPC with a modified security group matrix permitting explicit SSH access mapping on Port 22.
 - Resolved Amazon Linux 2023 legacy compatibility constraints by deploying the `rsyslog` daemon engine to generate structured cryptographic file targets (`/var/log/secure`).
 - Orchestrated a custom CloudWatch Unified Agent JSON configuration matrix mapping dual-stream data ingestion pipelines (`bank-os-security-logs` and `bank-bootstrap-logs`) with a 7-day automated data retention policy.
+
+
+## Infrastructure as Code (IaC)
+### Week 13: Introduction to Terraform (S3 Provisioning)
+- Established secure local workstation environment variables mapping AWS programmatic IAM Access Keys for localized API execution.
+- Engineered a standard declarative HashiCorp Configuration Language (HCL) deployment matrix (`main.tf`) targeting provider ecosystem constraints.
+- Executed core Infrastructure as Code (IaC) engineering lifecycles including initialization (`terraform init`), structural dry-run evaluation (`terraform plan`), and live state application (`terraform apply`).
+- Automated the deterministic provisioning of a globally unique, multi-tagged Amazon S3 data bucket cluster completely bypassed from manual console interaction.
