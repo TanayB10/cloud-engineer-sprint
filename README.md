@@ -77,3 +77,11 @@
 - Swapped regional console contexts to the `us-east-1` (N. Virginia) global cost aggregation tier to capture structural account metrics.
 - Constructed a static CloudWatch Alarm (`Estimated-Charges-Over-5-Dollars`) mapping the `EstimatedCharges` metric on a 6-hour evaluation frequency.
 - Provisioned an automated Simple Notification Service (SNS) messaging topic (`billing-alarm-topic`), binding an email communication endpoint for real-time cost escalation alerts.
+
+
+## Security, Monitoring, & Cost Optimization (Cont.)
+### Week 12: Centralized Logging (CloudWatch Logs Agent)
+- Formulated a restrictive Identity & Access Management (IAM) role (`bank-ec2-monitoring-role`) granting secure API write execution via the `CloudWatchAgentServerPolicy`.
+- Provisioned a decoupled testing endpoint inside a custom VPC with a modified security group matrix permitting explicit SSH access mapping on Port 22.
+- Resolved Amazon Linux 2023 legacy compatibility constraints by deploying the `rsyslog` daemon engine to generate structured cryptographic file targets (`/var/log/secure`).
+- Orchestrated a custom CloudWatch Unified Agent JSON configuration matrix mapping dual-stream data ingestion pipelines (`bank-os-security-logs` and `bank-bootstrap-logs`) with a 7-day automated data retention policy.
