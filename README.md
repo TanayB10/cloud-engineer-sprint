@@ -61,3 +61,11 @@
 - Engineered an AWS Target Group (`bank-web-targets`) passing automated Layer 7 HTTP health checks across decoupled EC2 web endpoints.
 - Provisioned an internet-facing Application Load Balancer (ALB) enforcing a dynamic Round-Robin traffic distribution matrix.
 - Conducted Chaos Engineering validation by executing an unannounced server power shutdown, verifying immediate sub-minute failover capabilities with 100% application uptime.
+
+
+## Core AWS Compute & Automation (Cont.)
+### Week 10: Auto-Scaling & Self-Healing Systems (ASG)
+- Formulated a standard infrastructure configuration blueprint (`bank-web-template`) incorporating automated Apache installation routines via Launch Template user data.
+- Deployed a multi-Availability Zone Auto Scaling Group (`bank-web-asg`) mapped across custom public subnets with target-tracking thresholds bound to a 70% CPU metric ceiling.
+- Enforced systemic elasticity parameters regulating high-availability bounds across structural Desired (2), Minimum (1), and Maximum (4) operational constraints.
+- Executed Chaos Engineering lifecycle degradation tests, validating automated event detection and stateless self-healing compute provisioning without administrative manual intervention.
