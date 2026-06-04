@@ -24,8 +24,8 @@ resource "aws_vpc" "dynamic_bank_vpc" {
 
 # Dynamic Subnet
 resource "aws_subnet" "dynamic_subnet" {
-  vpc_id            = aws_vpc.dynamic_bank_vpc.id
-  cidr_block        = var.subnet_cidr
+  vpc_id     = aws_vpc.dynamic_bank_vpc.id
+  cidr_block = var.subnet_cidr
 
   tags = {
     Name = "bank-${var.environment_tag}-public-subnet"
