@@ -121,3 +121,11 @@
 - Analyzed the state management architecture of Infrastructure as Code by dissecting the underlying schema variables within the structured JSON `terraform.tfstate` ledger.
 - Evaded resource synchronization conflicts by tracking deployment metadata drift boundaries through deterministic state serialization mappings.
 - Evaluated enterprise-scale collaboration framework mechanics including remote cloud state persistence architectures (Amazon S3 backends) and centralized distributed state locking enforcement protocols (Amazon DynamoDB tables).
+
+
+## Infrastructure as Code & GitOps Automation
+### Week 18: Introduction to CI/CD Pipelines
+- Evaluated core continuous integration validation mechanics by establishing structural code testing frameworks.
+- Deployed syntax formatting automation engines (`terraform fmt`) to programmatically clean style sheets and enforce formatting linting constraints.
+- Utilized syntactic validation parsers (`terraform validate`) to intercept configuration dependency errors and reference typos prior to infrastructure deployment lifecycles.
+- Formulated structural quality gate baselines to prepare workspaces for decoupled remote pipeline orchestration environments.
