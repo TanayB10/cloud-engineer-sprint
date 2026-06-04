@@ -1,0 +1,10 @@
+# Local terraform execution state directories
+.terraform/
+*.ids
+*.tfstate
+*.tfstate.backup
+
+# Local crash logs or override parameters
+.terraform.lock.hcl
+*.tfvars
+*.tfvars.json

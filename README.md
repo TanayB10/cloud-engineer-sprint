@@ -100,3 +100,11 @@
 - Provisioned a programmatic Virtual Private Cloud (VPC) with custom CIDR block segmentations (`10.0.0.0/16`) and automated DNS hostname mapping.
 - Orchestrated automated routing boundaries by linking public subnet allocations, an edge Internet Gateway interface, and explicit default routing declarations (`0.0.0.0/0`).
 - Codified an infrastructure firewall policy matrix within an isolated Security Group schema to selectively regulate incoming Port 80 (HTTP) and Port 22 (SSH) packet traffic.
+
+
+### Week 15: Terraform Variables & Outputs
+- Abstracted static resource definitions into a modular three-file architecture layout configuration (`main.tf`, `variables.tf`, `outputs.tf`).
+- Codified input parameter variable structures enforcing strict validation constraints, description schemas, and fallback defaults for regional and CIDR configurations.
+- Engineered dynamic string interpolation models (`bank-${var.environment_tag}-vpc`) allowing polymorphic runtime tag generation.
+- Implemented runtime command-line variable injections (`-var`) to successfully override default configurations on the fly.
+- Configured explicit infrastructure output telemetry blocks to programmatically fetch and render live AWS `vpc_id` and `subnet_id` tokens directly to the terminal stdout.
