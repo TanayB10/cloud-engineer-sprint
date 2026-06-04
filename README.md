@@ -108,3 +108,10 @@
 - Engineered dynamic string interpolation models (`bank-${var.environment_tag}-vpc`) allowing polymorphic runtime tag generation.
 - Implemented runtime command-line variable injections (`-var`) to successfully override default configurations on the fly.
 - Configured explicit infrastructure output telemetry blocks to programmatically fetch and render live AWS `vpc_id` and `subnet_id` tokens directly to the terminal stdout.
+
+
+### Week 16: Codifying the Bank Architecture (The Big Build)
+- Engineered a full single-run infrastructure topology matrix (`main.tf`) translating a multi-tier custom network and compute cluster into an autonomous codebase.
+- Overcame brittle regional marketplace image mapping constraints by implementing a dynamic AWS Systems Manager (SSM) Parameter Store data query (`/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64`).
+- Orchestrated the autonomous bootstrapping of an EC2 compute resource via multi-line inline shell script configurations (`user_data`) to fully configure an active Apache (`httpd`) server.
+- Formulated custom output telemetry blocks to programmatically render live endpoint links directly to the local terminal workspace.
