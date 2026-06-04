@@ -115,3 +115,9 @@
 - Overcame brittle regional marketplace image mapping constraints by implementing a dynamic AWS Systems Manager (SSM) Parameter Store data query (`/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64`).
 - Orchestrated the autonomous bootstrapping of an EC2 compute resource via multi-line inline shell script configurations (`user_data`) to fully configure an active Apache (`httpd`) server.
 - Formulated custom output telemetry blocks to programmatically render live endpoint links directly to the local terminal workspace.
+
+
+### Week 17: Terraform State & Team Collaboration
+- Analyzed the state management architecture of Infrastructure as Code by dissecting the underlying schema variables within the structured JSON `terraform.tfstate` ledger.
+- Evaded resource synchronization conflicts by tracking deployment metadata drift boundaries through deterministic state serialization mappings.
+- Evaluated enterprise-scale collaboration framework mechanics including remote cloud state persistence architectures (Amazon S3 backends) and centralized distributed state locking enforcement protocols (Amazon DynamoDB tables).
