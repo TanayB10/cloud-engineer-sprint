@@ -1,0 +1,39 @@
+name: "Terraform Continuous Integration (CI)"
+
+# 1. Trigger the pipeline on any push to the main branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  terraform_verification:
+    name: "Execute Code Quality Gates"
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Pull down the repository code into the virtual machine
+      - name: Checkout Code Baseline
+        uses: actions/checkout@v4
+
+      # Step 2: Install the official HashiCorp Terraform CLI binary onto the runner
+      - name: Install Terraform Engine
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.7.0"
+
+      # Step 3: Verify the code meets strict style guidelines
+      - name: Run Style Sheet Linter
+        run: terraform fmt -check -recursive
+
+      # Step 4: Initialize the working directories to catch plugin gaps
+      - name: Initialize Lab 18 Directory
+        run: |
+          cd terraform-labs/week18
+          terraform init -backend=false
+
+      # Step 5: Execute the compiler validation logic check
+      - name: Run Configuration Validator
+        run: |
+          cd terraform-labs/week18
+          terraform validate
