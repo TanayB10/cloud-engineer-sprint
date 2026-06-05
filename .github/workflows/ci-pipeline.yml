@@ -1,39 +1,49 @@
-name: "Terraform Continuous Integration (CI)"
+name: "Terraform Continuous Deployment (CD) Capstone"
 
-# 1. Trigger the pipeline on any push to the main branch
 on:
   push:
     branches:
       - main
 
 jobs:
-  terraform_verification:
-    name: "Execute Code Quality Gates"
+  terraform_pipeline:
+    name: "Execute Capstone Deployment Pipeline"
     runs-on: ubuntu-latest
 
+    # Inject your encrypted AWS credentials into the entire virtual machine environment
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
     steps:
-      # Step 1: Pull down the repository code into the virtual machine
       - name: Checkout Code Baseline
         uses: actions/checkout@v4
 
-      # Step 2: Install the official HashiCorp Terraform CLI binary onto the runner
       - name: Install Terraform Engine
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: "1.7.0"
 
-      # Step 3: Verify the code meets strict style guidelines
       - name: Run Style Sheet Linter
         run: terraform fmt -check -recursive
 
-      # Step 4: Initialize the working directories to catch plugin gaps
-      - name: Initialize Lab 18 Directory
+      # Initialize and Validate the Week 16 Master Bank Architecture
+      - name: Initialize Bank Architecture Core
         run: |
-          cd terraform-labs/week18
+          cd terraform-labs/week16
           terraform init -backend=false
 
-      # Step 5: Execute the compiler validation logic check
-      - name: Run Configuration Validator
+      - name: Validate Bank Architecture Syntax
         run: |
-          cd terraform-labs/week18
+          cd terraform-labs/week16
           terraform validate
+
+      # THE GRADUATION CD GATE: Automatically Provision the Infrastructure to AWS!
+      - name: Execute Automated Cloud Deployment
+        run: |
+          cd terraform-labs/week16
+          terraform init -force-copy
+          terraform apply -auto-approve \
+            -var="aws_region=eu-central-1" \
+            -var="instance_type=t3.micro" \
+            -var="env_tag=Automated-Prod"
